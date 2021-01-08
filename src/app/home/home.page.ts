@@ -11,8 +11,7 @@ export class HomePage {
   opts = {
     slidesPerView: 2.4,
     spaceBetween: 10,
-    slidesOffsetBefore: 10,
-    slidesOffsetAfter: 10
+    slidesOffsetBefore: 10
   }
 
   constructor(private api: ApiService) {}
