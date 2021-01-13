@@ -1,0 +1,6 @@
+<div class="movies">
+  <img class="image" [src]="imageUrl" alt="">
+  <div class="rating">{{ movie.vote_average * 10 }}%</div>
+  <span class="title">{{ movie.title || movie.original_name }}</span> <br>
+  <span class="release_date">{{ (movie.release_date || movie.first_air_date) | date: 'MMMM, y' }}</span>
+</div>

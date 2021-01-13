@@ -12,8 +12,12 @@ export class ApiService {
   getTrending(){
     return this.http.get<any[]>(`${environment.api}/trending/all/day`).pipe(
       map((res: any) => {
-        return res.results;
-      })
+        return  res.results 
+      }),
+    // Sorting best movies --> worst
+      map(results => {
+        return results.sort((movie1, movie2) => movie2['vote_average'] - movie1['vote_average'])
+      }) 
     )
   }
 }
