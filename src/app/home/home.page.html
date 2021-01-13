@@ -10,7 +10,7 @@
   <h2>Trending Movies</h2>
 <ion-slides [options]="opts">
   <ion-slide *ngFor="let trend of trending">
-  <img [src]="'http://image.tmdb.org/t/p/w200' + trend.poster_path">
+    <movie-preview [movie]="trend"></movie-preview>
   </ion-slide>
 </ion-slides>
 </ion-content>
