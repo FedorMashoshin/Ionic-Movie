@@ -20,4 +20,8 @@ export class ApiService {
       }) 
     )
   }
+
+  getMovieDetails(id, type){
+    return this.http.get(`${environment.api}/${type}/${id}`)
+  }
 }

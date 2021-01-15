@@ -1,4 +1,4 @@
-<div class="movies">
+<div class="movies" [routerLink]="[movie.media_type, movie.id]" tappable>
   <img class="image" [src]="imageUrl" alt="">
   <div class="rating">{{ movie.vote_average * 10 }}%</div>
   <span class="title">{{ movie.title || movie.original_name }}</span> <br>
