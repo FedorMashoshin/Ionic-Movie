@@ -12,6 +12,7 @@ export class DetailsPage implements OnInit {
   movie = null;
   background = null;
   imageUrl = null;
+  runtime = null;
 
   constructor(
     private api: ApiService,
@@ -23,6 +24,8 @@ export class DetailsPage implements OnInit {
     this.api.getMovieDetails(id, type).subscribe(res => {
       console.log(res);
       this.movie = res;
+      this.runtime = `${res.runtime / 60 ^ 0}h. ` + res.runtime % 60 + ' min. ';
+
       if(this.movie.backdrop_path) {
         this.background = `${environment.images}/w400/${this.movie.backdrop_path}`;
       }
