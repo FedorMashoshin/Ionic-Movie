@@ -16,6 +16,7 @@
 }
 
 .title{
+  color: var(--main);
   text-align: center;
   font-weight: 900;
   font-size: 1.7rem;
@@ -48,7 +49,8 @@
 }
 ion-icon{
   margin-right: 0.5rem;
-  color:rgb(165, 165, 165)
+  color:var(--main);
+  opacity: .5;
 }
 .rating-right{
   display: flex;
@@ -57,7 +59,7 @@ ion-icon{
 .rating{
   font-size: 1.2rem;
   margin-left: 1.5rem;
-  background-color:rgb(4, 173, 4);
+  background-color: var(--main);
   padding: 0.8rem;
   font-weight: 700;
   border-radius: 50%;
@@ -65,6 +67,7 @@ ion-icon{
 }
 .overview{
   &-header{
+    color: var(--main);
     text-align: center;
     font-weight: 700;
   }
