@@ -24,4 +24,11 @@ export class ApiService {
   getMovieDetails(id, type){
     return this.http.get(`${environment.api}/${type}/${id}`)
   }
+
+  getMovieCast(id, type){
+    return this.http.get(`${environment.api}/${type}/${id}/credits`).pipe(
+      map((res:any) => res.cast)
+    );
+  }
+
 }

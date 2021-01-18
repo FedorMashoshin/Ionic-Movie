@@ -11,10 +11,7 @@
   <div class="">
     <img [src]="imageUrl" class="movie-img" *ngIf="imageUrl" alt="">
   </div>
-
-
-
-<div [style.--background]="mainColor" class="info" *ngIf="movie">
+<div class="info" *ngIf="movie">
   <div class="header" >
     <p class="title">{{ movie?.title || movie?.original_name }}
     </p>
@@ -42,7 +39,15 @@
   </div>
   <div class="overview"> 
     <h2 class="overview-header">Overview</h2>
-    {{ movie.overview }}</div>
+    {{ movie.overview }}
+  </div>
 </div>
-
+<div class="actors" *ngIf="cast.length > 0">
+  <h3 class="actors-header">Actors:</h3>
+  <ion-slides [options]="opts">
+    <ion-slide *ngFor="let c of cast">
+      <cast [actor]="c"></cast>
+    </ion-slide>
+  </ion-slides>
+</div>
 </ion-content>

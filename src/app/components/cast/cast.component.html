@@ -1,0 +1,11 @@
+<ion-card [routerLink]="['/actor', actor.id]" tappable>
+  <ion-card-header>
+    <img [src]="imageUrl" *ngIf="actor.profile_path">
+  </ion-card-header>
+  <ion-card-content>
+    <div class="name-box">
+      <b class="name">{{ actor.name}}</b><br>
+    <span><i>{{ actor.character }}</i></span>
+    </div>
+  </ion-card-content>
+</ion-card>
