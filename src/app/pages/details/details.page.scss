@@ -1,4 +1,5 @@
 .info{
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +8,7 @@
   font-family: 'Nunito', sans-serif;
   position: absolute;
   background-color: #fff;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
@@ -37,29 +38,34 @@
   justify-content: center;
   align-items: center;
 }
-.countries{
+.release_date, .duration, .countries{
+  font-style: italic;
   display: flex;
+  align-items: center;
+}
+.genres{
+  font-style: italic;
+}
+ion-icon{
+  margin-right: 0.5rem;
+  color:rgb(165, 165, 165)
 }
 .rating-right{
   display: flex;
   flex-direction: column;
 }
 .rating{
-  font-size: 1rem;
-  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
   background-color:rgb(4, 173, 4);
-  padding: 0.6rem;
+  padding: 0.8rem;
   font-weight: 700;
   border-radius: 50%;
   color:#fff;
 }
-.genres{
-  text-align: center;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
 .overview{
   &-header{
+    text-align: center;
     font-weight: 700;
   }
 }
