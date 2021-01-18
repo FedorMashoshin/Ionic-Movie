@@ -1,0 +1,65 @@
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  background-color: #fff;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+.tagline{
+  color:rgb(124, 124, 124);
+  margin: 0;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.rating-full{
+  color:rgb(58, 58, 58);
+  margin: 0.7rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countries{
+  display: flex;
+}
+.rating-right{
+  display: flex;
+  flex-direction: column;
+}
+.rating{
+  font-size: 1rem;
+  margin-right: 1rem;
+  background-color:rgb(4, 173, 4);
+  padding: 0.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  color:#fff;
+}
+.genres{
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.overview{
+  &-header{
+    font-weight: 700;
+  }
+}
