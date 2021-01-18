@@ -1,22 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
+
+import Vibrant from 'node-vibrant';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.page.html',
   styleUrls: ['./details.page.scss'],
 })
+
 export class DetailsPage implements OnInit {
   movie = null;
   background = null;
   imageUrl = null;
   runtime = null;
+  mainColor = '#fff';
+  textColor = '#000';
+
 
   constructor(
     private api: ApiService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private elementRef: ElementRef) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -26,14 +34,17 @@ export class DetailsPage implements OnInit {
       this.movie = res;
       this.runtime = `${res.runtime / 60 ^ 0}h. ` + res.runtime % 60 + ' min. ';
 
-      if(this.movie.backdrop_path) {
-        this.background = `${environment.images}/w400/${this.movie.backdrop_path}`;
-      }
       if(this.movie.poster_path) {
         this.imageUrl = `${environment.images}/w400/${this.movie.poster_path}`;
+        this.getDominantColor();
       }
     })
   }
-
+  getDominantColor(){
+    Vibrant.from(`${environment.images}/w400/${this.movie.poster_path}`).getPalette((err, palette) => {
+      this.mainColor = palette.Vibrant.getHex();
+      this.elementRef.nativeElement.style.setProperty('--main',  this.mainColor);
+    })
+  }
 
 }

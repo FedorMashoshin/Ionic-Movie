@@ -16,26 +16,29 @@
 }
 
 .title{
+  color: var(--main);
   text-align: center;
   font-weight: 900;
   font-size: 1.7rem;
   margin-bottom: 0;
 }
 .tagline{
-  color:rgb(124, 124, 124);
+  color:rgb(155, 155, 155);
   margin: 0;
   font-style: italic;
   font-weight: 300;
   text-align: center;
   font-size: 0.9rem;
   font-style: italic;
+  margin-bottom: 1rem;
 }
 .rating-full{
   color:rgb(58, 58, 58);
   margin: 0.7rem;
   font-size: 0.9rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
   align-items: center;
 }
 .release_date, .duration, .countries{
@@ -48,7 +51,8 @@
 }
 ion-icon{
   margin-right: 0.5rem;
-  color:rgb(165, 165, 165)
+  color:var(--main);
+  opacity: .5;
 }
 .rating-right{
   display: flex;
@@ -57,7 +61,7 @@ ion-icon{
 .rating{
   font-size: 1.2rem;
   margin-left: 1.5rem;
-  background-color:rgb(4, 173, 4);
+  background-color: var(--main);
   padding: 0.8rem;
   font-weight: 700;
   border-radius: 50%;
@@ -65,6 +69,7 @@ ion-icon{
 }
 .overview{
   &-header{
+    color: var(--main);
     text-align: center;
     font-weight: 700;
   }

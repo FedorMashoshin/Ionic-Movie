@@ -11,12 +11,11 @@
   <div class="">
     <img [src]="imageUrl" class="movie-img" *ngIf="imageUrl" alt="">
   </div>
-  <!-- <img [src]="background" class="background" *ngIf="background" alt=""> -->
 
 
 
-<div class="info" *ngIf="movie">
-  <div class="header">
+<div [style.--background]="mainColor" class="info" *ngIf="movie">
+  <div class="header" >
     <p class="title">{{ movie?.title || movie?.original_name }}
     </p>
     <p class="tagline">{{ movie.tagline }}</p>
