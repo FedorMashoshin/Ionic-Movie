@@ -18,7 +18,13 @@ export class DetailsPage implements OnInit {
   imageUrl = null;
   runtime = null;
   mainColor = '#fff';
-  textColor = '#000';
+  cast = [];
+
+  opts = {
+    slidesPerView: 2.4,
+    spaceBetween: 10,
+    slidesOffsetBefore: 10,
+  }
 
 
   constructor(
@@ -26,18 +32,24 @@ export class DetailsPage implements OnInit {
     private route: ActivatedRoute,
     private elementRef: ElementRef) { }
 
-  ngOnInit() {
+  ngOnInit() { 
     const id = this.route.snapshot.paramMap.get('id');
     const type = this.route.snapshot.paramMap.get('type');
+
     this.api.getMovieDetails(id, type).subscribe(res => {
       console.log(res);
       this.movie = res;
       this.runtime = `${res.runtime / 60 ^ 0}h. ` + res.runtime % 60 + ' min. ';
-
+      
       if(this.movie.poster_path) {
         this.imageUrl = `${environment.images}/w400/${this.movie.poster_path}`;
         this.getDominantColor();
       }
+    })
+
+    this.api.getMovieCast(id, type).subscribe(res => {
+      console.log(res)
+      this.cast = res;
     })
   }
   getDominantColor(){
