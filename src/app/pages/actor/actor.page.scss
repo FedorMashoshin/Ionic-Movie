@@ -1,0 +1,75 @@
+ion-content{
+  font-family: 'Nunito', sans-serif;
+  
+}
+ion-icon{
+  font-size: 3rem;
+}
+.name{
+  margin-top: 0;
+  padding: 0 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.info{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-birth{
+    font-style: italic;
+    font-size: 0.9rem;
+    color:rgb(163, 163, 163);
+  }
+  &-black{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: #000;
+    font-size: 1rem;
+  }
+}
+h2{
+  background-color:var(--main);
+  padding: .3rem 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ion-icon{
+    font-size: 1.5rem;
+    margin-left: .5rem;
+  }
+}
+.inner-text{
+  padding: .5rem 1rem;
+}
+
+.rating{
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--main);
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.divider{
+  height: 2px;
+  background-color: rgb(238, 238, 238);
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

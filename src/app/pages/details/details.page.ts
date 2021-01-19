@@ -40,7 +40,7 @@ export class DetailsPage implements OnInit {
       console.log(res);
       this.movie = res;
       this.runtime = `${res.runtime / 60 ^ 0}h. ` + res.runtime % 60 + ' min. ';
-
+      
       if(this.movie.poster_path) {
         this.imageUrl = `${environment.images}/w400/${this.movie.poster_path}`;
         this.getDominantColor();

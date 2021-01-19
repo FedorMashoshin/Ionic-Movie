@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
+import { environment } from 'src/environments/environment';
+
+import Vibrant from 'node-vibrant';
 
 @Component({
   selector: 'app-actor',
@@ -6,10 +11,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./actor.page.scss'],
 })
 export class ActorPage implements OnInit {
+  bio = null;
+  acting = [];
+  mainColor = '#e4e4e4';
+  profileImg = null;
 
-  constructor() { }
+  constructor(
+    private api: ApiService,
+    private route: ActivatedRoute,
+    private elementRef: ElementRef
+  ) { }
 
   ngOnInit() {
-  }
+    let id = this.route.snapshot.paramMap.get('id');
+    this.api.getActorDetails(id).subscribe(res => {
+      console.log('actor:', res);
+      this.bio = res;
+      this.profileImg = `${environment.images}/w200/${this.bio.profile_path}`;
+      this.getDominantColor();
+    });
+    this.api.getActorCreditList(id).subscribe(res => {
+      this.acting = res;
+      console.log('credits:', res);
+    })
+}
 
+
+getDominantColor(){
+  Vibrant.from(`${environment.images}/w200/${this.bio.profile_path}`).getPalette((err, palette) => {
+    this.mainColor = palette.Vibrant.getHex();
+    this.elementRef.nativeElement.style.setProperty('--main',  this.mainColor);
+  })
+}
 }

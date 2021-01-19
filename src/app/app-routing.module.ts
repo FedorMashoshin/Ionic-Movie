@@ -7,12 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: ':type/:id',
-    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
-  },
-  {
     path: 'actor/:id',
     loadChildren: () => import('./pages/actor/actor.module').then( m => m.ActorPageModule)
+  },
+  {
+    path: ':type/:id',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   }
 ];
 

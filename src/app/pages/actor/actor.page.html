@@ -1,9 +1,44 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>actor</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ bio?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="info">
+    <img class="info-left" [src]="profileImg" alt="">
+    <div class="info-right">
+      <ion-icon name="person-outline"></ion-icon>
+      <p class="name">{{ bio?.name }}</p>
+      <p class="info-birth">Date of birth: <br> <span class="info-black">{{ bio?.birthday }}</span></p>
+      <p class="info-birth">Place of birth: <br> <span class="info-black">{{ bio?.place_of_birth }}</span></p>
+    </div>
+  </div>
+
+  <div *ngIf='bio?.biography'>
+    <h2>Biography</h2>
+    <div class="inner-text">{{ bio?.biography }}</div>
+  </div>
+
+  <h2>  Movies <ion-icon name="videocam-outline"></ion-icon> </h2>
+  <div class="inner-text">
+    <ion-row class="row" *ngFor="let act of acting; let i = index" tappable [routerLink]="['/', act.media_type, act.id]">
+      <ion-col size="2">
+        <span class="year">{{ (act.first_air_date || act.release_date) | date:'yyyy' }}</span>
+      </ion-col>
+      <ion-col size="8">
+        <span class="title"><b>{{ act.title || act.original_name }}</b></span>
+      </ion-col>
+      <ion-col size="2">
+        <div class="rating">{{ act.vote_average }}</div>
+      </ion-col>
+      <ion-col size="12" *ngIf="acting[i+1] && acting[i+1].custom_year != act.custom_year">
+        <div class="divider"></div>
+      </ion-col>
+    </ion-row>
+  </div>
 
 </ion-content>

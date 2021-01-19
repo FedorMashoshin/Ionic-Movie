@@ -7,7 +7,7 @@ import {environment} from 'src/environments/environment';
   styleUrls: ['./cast.component.scss'],
 })
 export class CastComponent implements OnInit {
-  @Input('actor') actor:any;
+  @Input('actor') actor: any;
   imageUrl = '';
 
   constructor() { }
