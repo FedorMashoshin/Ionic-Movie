@@ -1,27 +1,26 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content{
+  font-family: 'Nunito', sans-serif;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.search{
+  padding: 1rem;
+  padding-bottom: 2rem;
+  background: url('https://e4p7c9i3.stackpathcdn.com/wp-content/uploads/2017/05/24-6-990x1408.jpg?iv=35') top;
+  background-position: cover;
+  color:white;
+  & h2{
+    font-weight: 700;
+    text-align: center;
+  }
+  & ion-searchbar{
+    padding: 0;
+  }
+
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+h2{
   margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
 }

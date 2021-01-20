@@ -8,7 +8,7 @@
   font-family: 'Nunito', sans-serif;
   position: absolute;
   background-color: #fff;
-  transform: translate(0, -50%);
+  transform: translate(0, -30%);
   border-radius: 20px;
   width: 100%;
 }
@@ -71,10 +71,8 @@ ion-icon{
   color:#fff;
 }
 .overview{
-  height: 300px;
+  height: 200px;
   overflow-y: scroll;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
   &-header{
     color: var(--main);
     text-align: center;
@@ -86,7 +84,8 @@ ion-icon{
   font-family: 'Nunito', sans-serif;
   color: var(--main);
   text-align: center;
-  transform: translate(0, 50%);
+  transform: translate(0, 75%);
+  padding-bottom: 2rem;
   &-header{
     font-size: 1.5rem;
     font-weight: 700;
