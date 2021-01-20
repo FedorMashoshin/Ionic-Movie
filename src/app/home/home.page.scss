@@ -24,3 +24,34 @@ h2{
   text-align: center;
   font-weight: 700;
 }
+.search-row{
+  display: flex;
+  align-items: center;
+}
+.line{
+  margin: 0.5rem 0;
+  height: 3px;
+  background-color: rgb(235, 235, 235);
+}
+.vote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 1.3rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom:0;
+  right:0;
+  color: #fff;
+}
+.title{
+  font-size: 1.3rem;
+}
+.year{
+  font-style: italic;
+  color:rgb(117, 117, 117);
+  margin: 0.3rem 0;
+}

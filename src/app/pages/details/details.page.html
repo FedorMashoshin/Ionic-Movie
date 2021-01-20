@@ -23,7 +23,7 @@
         <ion-icon name="calendar-outline"></ion-icon>
         <span>{{ (movie?.release_date || movie?.first_air_date) | date: 'longDate'}}, </span>  
       </div>
-      <span *ngIf="!movie.seasons" class="duration"> <ion-icon name="play-circle-outline"></ion-icon>{{ runtime }}</span> 
+      <span *ngIf="!movie.seasons" class="duration"> <ion-icon name="play-circle-outline"></ion-icon>{{ movie?.runtime }} min.</span> 
         <!-- isLast is for comma -->
   <div class="genres">
     <ion-icon name="grid-outline"></ion-icon>

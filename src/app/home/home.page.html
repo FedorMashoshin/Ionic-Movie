@@ -9,7 +9,7 @@
 <ion-content>
   <div class="search">
     <h2>Find your favourite movie, tv show and even more...</h2>
-    <ion-searchbar placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
+    <ion-searchbar color="light" placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
   </div>
 
 <div class="" *ngIf="!searchActive">
@@ -22,14 +22,21 @@
 </div>
 
 <div *ngIf="searchActive">
-  <ion-row *ngFor="let r of searchResults" [routerLink]="['/', r.media_type, r.id]" tappable>
-    <ion-col size="3" class="ion-no-padding">
+  <ion-row class="search-row" *ngFor="let r of searchResults" [routerLink]="['/', r.media_type, r.id]" tappable>
+    <ion-col size="4" class="ion-padding">
       <ion-img [src]="r.imageUrl" *ngIf="r.imageUrl"></ion-img>
+        <div class="vote" 
+          [ngStyle]="{'background-color': r.vote_average < 5 ? '#ff4545' : (r.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+          {{ r.vote_average }}
+        </div>
     </ion-col>
-    <ion-col size="9" class="preview">
-      <b>{{ r.title }}</b><br>
-          {{ r.overview.length }}
+    <ion-col size="8" class="preview">
+      <b class="title">{{ r.title || r.original_name }}</b>
+      <span class="year" *ngIf="r.release_date"><i> ({{ (r.release_date | slice:0:4) }})</i></span> <br>
       <span>{{ (r.overview.length > 90) ? (r.overview | slice:0:90)+'...': (r.overview) }}</span>
+    </ion-col>
+    <ion-col class="ion-no-padding" size="12">
+      <div class="line"></div>
     </ion-col>
   </ion-row>
 </div>
