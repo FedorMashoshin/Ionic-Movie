@@ -35,7 +35,9 @@
         <ion-icon name="globe-outline"></ion-icon> <span class="" *ngFor="let country of movie.production_countries; let isLast = last"> {{ country.iso_3166_1 }}<span *ngIf="!isLast">,&nbsp;</span></span>
       </div>
     </div>
-    <span class="rating">{{ movie.vote_average }}</span>
+    <span class="rating"
+    [ngStyle]="{'background-color': movie.vote_average < 5 ? '#ff4545' : (movie.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+    {{ movie.vote_average }}</span>
   </div>
   <div class="overview"> 
     <h2 class="overview-header">Overview</h2>
