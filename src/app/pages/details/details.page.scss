@@ -64,13 +64,13 @@ ion-icon{
   width: 3rem;
   height: 3rem;
   margin-left: 1.5rem;
-  background-color: var(--main);
   padding: 0.8rem;
   font-weight: 700;
   border-radius: 50%;
   color:#fff;
 }
 .overview{
+  padding-bottom: 2rem;
   height: 200px;
   overflow-y: scroll;
   &-header{
@@ -90,4 +90,8 @@ ion-icon{
     font-size: 1.5rem;
     font-weight: 700;
   }
+}
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+display: none;
 }

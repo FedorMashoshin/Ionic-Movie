@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -33,7 +33,9 @@
         <span class="title"><b>{{ act.title || act.original_name }}</b></span>
       </ion-col>
       <ion-col size="2">
-        <div class="rating">{{ act.vote_average }}</div>
+        <div class="rating"
+        [ngStyle]="{'background-color': act.vote_average < 5 ? '#ff4545' : (act.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+        {{ act.vote_average }}</div>
       </ion-col>
       <ion-col size="12" *ngIf="acting[i+1] && acting[i+1].custom_year != act.custom_year">
         <div class="divider"></div>
