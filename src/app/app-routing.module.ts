@@ -13,6 +13,22 @@ const routes: Routes = [
   {
     path: ':type/:id',
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'topactors',
+    loadChildren: () => import('./pages/topactors/topactors.module').then( m => m.TopactorsPageModule)
+  },
+  {
+    path: 'topmovies',
+    loadChildren: () => import('./pages/topmovies/topmovies.module').then( m => m.TopmoviesPageModule)
+  },
+  {
+    path: 'toptvshows',
+    loadChildren: () => import('./pages/toptvshows/toptvshows.module').then( m => m.ToptvshowsPageModule)
   }
 ];
 

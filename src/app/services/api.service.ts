@@ -35,6 +35,30 @@ export class ApiService {
     return this.http.get(`${environment.api}/person/${id}`)
   }
 
+  getPopularActors(){
+    return this.http.get(`${environment.api}/person/popular`).pipe(
+      map((res: any) => {
+        return res.results;
+      })
+    )
+  }
+
+  getPopularMovies(){
+    return this.http.get(`${environment.api}/movie/top_rated`).pipe(
+      map((res: any) => {
+        return res.results;
+      })
+    )
+  }
+
+  getPopularShows(){
+    return this.http.get(`${environment.api}/tv/top_rated`).pipe(
+      map((res: any) => {
+        return res.results;
+      })
+    )
+  }
+
   getActorCreditList(id){
     return this.http.get(`${environment.api}/person/${id}/combined_credits`).pipe(
       map((res:any) => res.cast),
