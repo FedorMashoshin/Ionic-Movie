@@ -71,6 +71,7 @@ ion-icon{
   color:#fff;
 }
 .overview{
+  padding-bottom: 2rem;
   height: 200px;
   overflow-y: scroll;
   &-header{
@@ -91,7 +92,7 @@ ion-icon{
     font-weight: 700;
   }
 }
-::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+display: none;
 }
