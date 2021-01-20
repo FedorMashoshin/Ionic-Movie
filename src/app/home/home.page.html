@@ -6,11 +6,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
+  <div class="search">
+    <h2>Find your favourite movie, tv show and even more...</h2>
+    <ion-searchbar placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
+  </div>
+
+<div class="" *ngIf="!searchActive">
   <h2>Trending Movies</h2>
-<ion-slides [options]="opts">
-  <ion-slide *ngFor="let trend of trending">
-    <movie-preview [movie]="trend"></movie-preview>
-  </ion-slide>
-</ion-slides>
+    <ion-slides [options]="opts">
+      <ion-slide *ngFor="let trend of trending">
+      <movie-preview [movie]="trend"></movie-preview>
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<div *ngIf="searchActive">
+  <ion-row *ngFor="let r of searchResults" [routerLink]="['/', r.media_type, r.id]" tappable>
+    <ion-col size="3" class="ion-no-padding">
+      <ion-img [src]="r.imageUrl" *ngIf="r.imageUrl"></ion-img>
+    </ion-col>
+    <ion-col size="9" class="preview">
+      <b>{{ r.title }}</b><br>
+          {{ r.overview.length }}
+      <span>{{ (r.overview.length > 90) ? (r.overview | slice:0:90)+'...': (r.overview) }}</span>
+    </ion-col>
+  </ion-row>
+</div>
 </ion-content>

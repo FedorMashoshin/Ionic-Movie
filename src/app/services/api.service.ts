@@ -59,5 +59,22 @@ export class ApiService {
       })
     )
   }
+  getSearchResults(term) {
+    return this.http.get(`${environment.api}/search/multi`, {
+      params: {
+        query: term
+      }
+    }).pipe(
+      map((res: any) => res.results),
+      map(results => {
+        return results.map(r => {
+          if (r.poster_path) {
+            r.imageUrl = `${environment.images}/w200${r.poster_path}`;
+          }
+          return r;
+        })
+      })
+    );
+  }
 
 }
