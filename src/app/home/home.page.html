@@ -1,7 +1,7 @@
-<ion-header>  
-   <ion-toolbar color="primary">  
+<ion-header class="ion-no-border">  
+   <ion-toolbar color="warning">  
      <ion-buttons slot="start">  
-       <ion-menu-button color="light"></ion-menu-button>   
+       <ion-menu-button color="dark"></ion-menu-button>   
      </ion-buttons>  
      <ion-title>  
        MOVIES
@@ -16,7 +16,7 @@
   </div>
 
 <div class="" *ngIf="!searchActive">
-  <h2>Trending Movies</h2>
+  <h2 class="trending">Trending Movies</h2>
     <ion-slides [options]="opts">
       <ion-slide *ngFor="let trend of trending">
       <movie-preview [movie]="trend"></movie-preview>
@@ -29,7 +29,7 @@
     <ion-col size="4" class="ion-padding">
       <ion-img [src]="r.imageUrl" *ngIf="r.imageUrl"></ion-img>
         <div class="vote" 
-          [ngStyle]="{'background-color': r.vote_average < 5 ? '#ff4545' : (r.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+          [ngStyle]="{'background-color': r.vote_average < 5 ? 'var(--ion-color-danger)' : (r.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning)') }">
           {{ r.vote_average }}
         </div>
     </ion-col>
