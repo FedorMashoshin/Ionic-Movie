@@ -19,7 +19,8 @@
   <ion-row class="row" [routerLink]="['/actor', r.id]" tappable  *ngFor="let r of popularActors; let i = index">
     <ion-col size="4" class="image">
       <ion-img [src]='imageUrl + r.profile_path'></ion-img>
-      <div class="rating">
+      <div class="rating"
+      [ngStyle]="{'background-color': r.popularity < 5 ? 'var(--ion-color-danger)' : (r.popularity >= 20 ? 'var(--ion-color-success)' : 'var(--ion-color-warning') }">
         {{ r.popularity | number:'1.1-1' }}
       </div>
     </ion-col>
