@@ -1,15 +1,46 @@
 .icon{
-  background-color: #D21622;
-  border-radius: 15px;
-  padding: .7rem;
-  color: #fff;
-  height: 2rem;
-  width: 2rem;
+  color: rgb(95, 95, 95);
+  font-size: 3.2rem;
 }
 
 .item{
-  // border-bottom: 1px solid #000;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: rgb(95, 95, 95);
   font-family: 'Nunito', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
+}
+.test{
+  height: 100%;
+  width: 100%;
+}
+
+ion-menu{
+  --width: 40vw;
+  
+}
+ion-list{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:first-child{
+    background-color: #90ccf4;
+  }
+  &:nth-child(2){
+    background-color: #f78888;
+  }
+  &:nth-child(3){
+    background-color: #ececec;
+  }
+  &:nth-child(4){
+    background-color: #f3d250;
+  }
 }
