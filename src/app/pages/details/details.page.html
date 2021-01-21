@@ -26,8 +26,7 @@
         <ion-icon name="calendar-outline"></ion-icon>
         <span>{{ (movie?.release_date || movie?.first_air_date) | date: 'longDate'}} </span>  
       </div>
-      <span *ngIf="!movie.seasons" class="duration"> <ion-icon name="play-circle-outline"></ion-icon>
-        {{ movie.runtime / 60 - 1 | number:'1.0-0'}}h.  {{ movie.runtime % 60 }}min.</span> 
+      <span *ngIf="!movie.seasons" class="duration"> <ion-icon name="play-circle-outline"></ion-icon>{{ movie?.runtime }} min.</span> 
         <!-- isLast is for comma -->
   <div class="genres">
     <ion-icon name="grid-outline"></ion-icon>
@@ -52,7 +51,7 @@
     <h2 class="overview-header">Overview</h2>
     {{ movie.overview }}
   </div>
-  <h3 class="actors-header" *ngIf="cast.length > 0">Actors:</h3>
+  <h3 class="actors-header" >Actors:</h3>
   <div class="actors" *ngIf="cast.length > 0">
       <div class="test" *ngFor="let c of cast">
         <cast [actor]="c"></cast>
