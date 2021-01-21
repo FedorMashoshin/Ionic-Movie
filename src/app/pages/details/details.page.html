@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -36,7 +36,7 @@
       </div>
     </div>
     <span class="rating"
-    [ngStyle]="{'background-color': movie.vote_average < 5 ? '#ff4545' : (movie.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+    [ngStyle]="{'background-color': movie.vote_average < 5 ? 'var(--ion-color-danger)' : (movie.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning') }">
     {{ movie.vote_average }}</span>
   </div>
   <div class="overview"> 

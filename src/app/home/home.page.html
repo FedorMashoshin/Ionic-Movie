@@ -1,5 +1,5 @@
 <ion-header>  
-   <ion-toolbar color="primary">  
+   <ion-toolbar color="secondary">  
      <ion-buttons slot="start">  
        <ion-menu-button color="light"></ion-menu-button>   
      </ion-buttons>  
@@ -29,7 +29,7 @@
     <ion-col size="4" class="ion-padding">
       <ion-img [src]="r.imageUrl" *ngIf="r.imageUrl"></ion-img>
         <div class="vote" 
-          [ngStyle]="{'background-color': r.vote_average < 5 ? '#ff4545' : (r.vote_average >= 7 ? '#57e32c' : '#ffa534') }">
+          [ngStyle]="{'background-color': r.vote_average < 5 ? 'var(--ion-color-danger)' : (r.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning)') }">
           {{ r.vote_average }}
         </div>
     </ion-col>
