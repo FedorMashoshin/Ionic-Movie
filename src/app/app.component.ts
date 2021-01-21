@@ -36,7 +36,7 @@ export class AppComponent {
       icon  : 'tv-outline'   
     },
     {  
-      title : 'Main Page',  
+      title : 'Home Page',  
       url   : '/',  
       icon  : 'home-outline'   
     }

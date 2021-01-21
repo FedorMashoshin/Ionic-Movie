@@ -1,10 +1,13 @@
 <ion-app>
   <ion-menu side="start" menuId="first" contentId="content">  
-    <ion-content color="light">  
-      <ion-list *ngFor="let pages of navigate">  
+    <ion-content color="light"> 
+      <div class="wallpaper">
+        <img src="https://images.cdn2.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823384.jpg" alt="">
+      </div>
+      <ion-list lines="full" *ngFor="let pages of navigate">  
         <ion-menu-toggle auto-hide="true">  
-          <ion-item [routerLink]="pages.url" routerDirection="forward">  
-            <ion-icon [name]="pages.icon" slot="start"></ion-icon>  
+          <ion-item class="item"  [routerLink]="pages.url" routerDirection="forward">  
+            <ion-icon class="icon" [name]="pages.icon" slot="start"></ion-icon>  
               {{pages.title}}   
           </ion-item>  
         </ion-menu-toggle>  

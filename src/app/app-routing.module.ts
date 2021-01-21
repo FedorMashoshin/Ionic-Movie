@@ -15,10 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   },
   {
-    path: 'menu',
-    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
-  },
-  {
     path: 'topactors',
     loadChildren: () => import('./pages/topactors/topactors.module').then( m => m.TopactorsPageModule)
   },
