@@ -1,11 +1,8 @@
-<ion-card [routerLink]="['/actor', actor.id]" tappable>
-  <ion-card-header>
+<div class='card' [routerLink]="['/actor', actor.id]" tappable>
     <img [src]="imageUrl" *ngIf="actor.profile_path">
-  </ion-card-header>
-  <ion-card-content>
+    <img src="https://audienceaudit.com/wp-content/uploads/2013/07/head_question_mark.png" *ngIf="!actor.profile_path">
     <div class="name-box">
       <b class="name">{{ actor.name}}</b><br>
     <span><i>{{ actor.character }}</i></span>
     </div>
-  </ion-card-content>
-</ion-card>
+</div>

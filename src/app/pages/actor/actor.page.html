@@ -13,11 +13,12 @@
 <ion-content>
   <div class="info">
     <img class="info-left" [src]="profileImg" alt="">
+    <img class="info-left" src="https://audienceaudit.com/wp-content/uploads/2013/07/head_question_mark.png" alt="" *ngIf="!bio?.profile_path">
     <div class="info-right">
       <ion-icon name="person-outline"></ion-icon>
       <p class="name">{{ bio?.name }}</p>
-      <p class="info-birth">Date of birth: <br> <span class="info-black">{{ bio?.birthday }}</span></p>
-      <p class="info-birth">Place of birth: <br> <span class="info-black">{{ bio?.place_of_birth }}</span></p>
+      <p class="info-birth">Date of birth: <br> <span class="info-black">{{ bio?.birthday ? bio.birthday : 'Unknown' }}</span></p>
+      <p class="info-birth">Place of birth: <br> <span class="info-black">{{ bio?.place_of_birth ? bio.place_of_birth : 'Unknown' }}</span></p>
     </div>
   </div>
 

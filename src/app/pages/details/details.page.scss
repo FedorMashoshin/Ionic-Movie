@@ -1,14 +1,14 @@
 .info{
+  padding: 0 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
   font-family: 'Nunito', sans-serif;
   position: absolute;
   background-color: #fff;
-  transform: translate(0, -30%);
+  top: 60%;
   border-radius: 20px;
   width: 100%;
 }
@@ -71,8 +71,6 @@ ion-icon{
 }
 .overview{
   padding-bottom: 2rem;
-  height: 200px;
-  overflow-y: scroll;
   &-header{
     color: var(--main);
     text-align: center;
@@ -81,12 +79,16 @@ ion-icon{
 }
 
 .actors{
+  overflow-x: scroll;
+  height: 350px;
+  width: 100%;
+  display: flex;
   font-family: 'Nunito', sans-serif;
   color: var(--main);
   text-align: center;
-  transform: translate(0, 75%);
   padding-bottom: 2rem;
   &-header{
+    color: var(--main);
     font-size: 1.5rem;
     font-weight: 700;
   }
