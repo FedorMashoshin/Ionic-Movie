@@ -15,8 +15,27 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
-    this.initializeApp();
+    this.initializeApp();  
   }
+
+  navigate =   
+  [  
+      { 
+      title : 'Top Actors',
+      url   : '/topactors',
+      icon  : 'people-outline' 
+      },
+    { 
+      title : 'Top Movies',  
+      url   : '/topmovies',  
+      icon  : 'videocam-outline'  
+    },   
+    {  
+      title : 'Top TV Shows',  
+      url   : '/toptvshows',  
+      icon  : 'tv-outline'   
+    }
+  ];
 
   initializeApp() {
     this.platform.ready().then(() => {
