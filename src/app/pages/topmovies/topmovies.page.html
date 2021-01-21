@@ -19,15 +19,13 @@
   <ion-row class="row" [routerLink]="['/movie', r.id]" tappable  *ngFor="let r of topMovies; let i = index">
     <ion-col size="4" class="image">
       <ion-img [src]='imageUrl + r.poster_path'></ion-img>
-      <div class="rating">
+      <div class="rating"
+      [ngStyle]="{'background-color': r.vote_average < 5 ? 'var(--ion-color-danger)' : (r.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning') }">
         {{ r.vote_average | number:'1.1-1' }}
       </div>
     </ion-col>
     <ion-col size="8" class="preview">
       <p class="name">{{ i + 1 }}. {{ r.title }} <span class=small-date>({{ (r.release_date || r.first_air_date) | date: 'yyyy' }})</span></p>
-      <li class="movie" *ngFor="let movie of r.known_for">
-          {{ movie.name || movie.original_title}}
-      </li>
       <span>{{ (r.overview.length > 90) ? (r.overview | slice:0:90)+'...': (r.overview) }}</span>
     </ion-col>
     <ion-col class="ion-no-padding" size="12">

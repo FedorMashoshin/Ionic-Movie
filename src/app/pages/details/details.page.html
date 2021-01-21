@@ -3,6 +3,9 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons>  
     <ion-title>{{ movie?.title || movie?.original_name }}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +24,7 @@
     <div class="rating-right">
       <div class="release_date">
         <ion-icon name="calendar-outline"></ion-icon>
-        <span>{{ (movie?.release_date || movie?.first_air_date) | date: 'longDate'}}, </span>  
+        <span>{{ (movie?.release_date || movie?.first_air_date) | date: 'longDate'}} </span>  
       </div>
       <span *ngIf="!movie.seasons" class="duration"> <ion-icon name="play-circle-outline"></ion-icon>{{ movie?.runtime }} min.</span> 
         <!-- isLast is for comma -->
@@ -32,7 +35,12 @@
     </span>
   </div>
       <div class="countries">
-        <ion-icon name="globe-outline"></ion-icon> <span class="" *ngFor="let country of movie.production_countries; let isLast = last"> {{ country.iso_3166_1 }}<span *ngIf="!isLast">,&nbsp;</span></span>
+        <ion-icon name="globe-outline"></ion-icon> 
+        <span *ngIf="movie.production_countries.length === 0">Unknown</span>
+        <span class="" *ngFor="let country of movie.production_countries; let isLast = last">
+          <span *ngIf="country">{{ country.iso_3166_1 }}</span><span *ngIf="!isLast">,&nbsp;</span>
+        </span>
+         
       </div>
     </div>
     <span class="rating"

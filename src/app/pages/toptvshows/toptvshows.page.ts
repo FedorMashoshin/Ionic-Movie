@@ -7,12 +7,15 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./toptvshows.page.scss'],
 })
 export class ToptvshowsPage implements OnInit {
+  topShows = [];
+  imageUrl = 'http://image.tmdb.org/t/p/w200';
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
     this.api.getPopularShows().subscribe(res => {
-      console.log('Top Shows:', res)
+      console.log('Top Shows:', res);
+      this.topShows = res;
     })
   }
 
