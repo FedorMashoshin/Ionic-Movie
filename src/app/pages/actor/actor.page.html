@@ -1,8 +1,11 @@
-<ion-header>
-  <ion-toolbar color="light">
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">  
+      <ion-menu-button color="dark"></ion-menu-button>   
+    </ion-buttons> 
     <ion-title>{{ bio?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -23,7 +26,7 @@
     <div class="inner-text">{{ bio?.biography }}</div>
   </div>
 
-  <h2>  Movies <ion-icon name="videocam-outline"></ion-icon> </h2>
+  <h2>  Movies</h2>
   <div class="inner-text">
     <ion-row class="row" *ngFor="let act of acting; let i = index" tappable [routerLink]="['/', act.media_type, act.id]">
       <ion-col size="2">

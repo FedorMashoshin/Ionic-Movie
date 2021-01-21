@@ -1,7 +1,7 @@
-<ion-header>  
-   <ion-toolbar color="secondary">  
+<ion-header class="ion-no-border">  
+   <ion-toolbar color="warning">  
      <ion-buttons slot="start">  
-       <ion-menu-button color="light"></ion-menu-button>   
+       <ion-menu-button color="dark"></ion-menu-button>   
      </ion-buttons>  
      <ion-title>  
        MOVIES
@@ -16,7 +16,7 @@
   </div>
 
 <div class="" *ngIf="!searchActive">
-  <h2>Trending Movies</h2>
+  <h2 class="trending">Trending Movies</h2>
     <ion-slides [options]="opts">
       <ion-slide *ngFor="let trend of trending">
       <movie-preview [movie]="trend"></movie-preview>

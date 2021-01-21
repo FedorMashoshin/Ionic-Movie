@@ -28,19 +28,10 @@ export class ActorPage implements OnInit {
       console.log('actor:', res);
       this.bio = res;
       this.profileImg = `${environment.images}/w200/${this.bio.profile_path}`;
-      this.getDominantColor();
     });
     this.api.getActorCreditList(id).subscribe(res => {
       this.acting = res;
       console.log('credits:', res);
     })
-}
-
-
-getDominantColor(){
-  Vibrant.from(`${environment.images}/w200/${this.bio.profile_path}`).getPalette((err, palette) => {
-    this.mainColor = palette.Vibrant.getHex();
-    this.elementRef.nativeElement.style.setProperty('--main',  this.mainColor);
-  })
 }
 }
