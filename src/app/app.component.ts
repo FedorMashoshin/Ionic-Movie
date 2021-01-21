@@ -34,6 +34,11 @@ export class AppComponent {
       title : 'Top TV Shows',  
       url   : '/toptvshows',  
       icon  : 'tv-outline'   
+    },
+    {  
+      title : 'Main Page',  
+      url   : '/',  
+      icon  : 'home-outline'   
     }
   ];
 

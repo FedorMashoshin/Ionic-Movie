@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>topactors</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">  
+      <ion-menu-button color="light"></ion-menu-button>   
+    </ion-buttons>  
+    <ion-title>Popular Actors</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="popular-top">
+    <img src="https://image.flaticon.com/icons/png/512/1486/1486474.png" alt="">
+    <span class="popular"> The 20 most popular actors <br><span class="small">(Based on TMDB rating)</span></span>
+  </div>
+  <div class="line"></div>
+  <ion-row class="row" [routerLink]="['/actor', r.id]" tappable  *ngFor="let r of popularActors; let i = index">
+    <ion-col size="4" class="image">
+      <ion-img [src]='imageUrl + r.profile_path'></ion-img>
+      <p class="rating">
+        Rating: {{ r.popularity | number:'1.1-1' }}
+      </p>
+    </ion-col>
+    <ion-col size="8" class="preview">
+      <p class="name">{{ i + 1 }}. {{ r.name }}</p>
+      <span class="best-movies">Best movies:</span>
+      <li class="movie" *ngFor="let movie of r.known_for">
+          {{ movie.name || movie.original_title}}
+      </li>
+    </ion-col>
+    <ion-col class="ion-no-padding" size="12">
+      <div class="line"></div>
+    </ion-col>
+  </ion-row>
 </ion-content>
