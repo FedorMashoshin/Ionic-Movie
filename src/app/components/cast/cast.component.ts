@@ -14,6 +14,7 @@ export class CastComponent implements OnInit {
 
   ngOnInit() {
     this.imageUrl = `${environment.images}/w200${this.actor.profile_path}`
+    console.log('IMAGE', this.imageUrl)
   }
 
 }
