@@ -19,4 +19,14 @@ export class TopmoviesPage implements OnInit {
     })
   }
 
+  doRefresh(e){
+    this.api.getPopularMovies().subscribe(res => {
+      console.log('Top Movies:', res);
+      this.topMovies = res;
+    }); 
+    setTimeout(() => {
+      e.target.complete();
+    }, 2000)
+  }
+
 }

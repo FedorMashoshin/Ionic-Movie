@@ -8,6 +8,7 @@ import { ApiService } from '../services/api.service';
 })
 export class HomePage {
   trending = [];
+  upcoming = [];
   opts = {
     slidesPerView: 2.4,
     spaceBetween: 10,
@@ -21,6 +22,10 @@ export class HomePage {
   ionViewWillEnter(){
     this.api.getTrending().subscribe(res => {
       this.trending = res;
+    })
+
+    this.api.getNowadaysMovies().subscribe(res => {
+      this.upcoming = res;
     })
   }
 
@@ -39,5 +44,18 @@ export class HomePage {
       this.searchResults = [];
     }
   }
+
+  doRefresh(e){
+    this.api.getTrending().subscribe(res => {
+      this.trending = res;
+    }); 
+    this.api.getNowadaysMovies().subscribe(res => {
+      this.upcoming = res;
+    });
+    setTimeout(() => {
+      e.target.complete();
+    }, 2000)
+  }
+
 
 }

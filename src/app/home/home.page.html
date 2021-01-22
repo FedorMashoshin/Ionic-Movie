@@ -10,6 +10,13 @@
 </ion-header> 
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+    pulllingIcon="arrow-dropdown"
+    refreShingspinner="circles"
+    ></ion-refresher-content>
+  </ion-refresher>
+
   <div class="search">
     <h2>Find your favourite movie, tv show and even more...</h2>
     <ion-searchbar color="light" placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
@@ -20,6 +27,13 @@
     <ion-slides [options]="opts">
       <ion-slide *ngFor="let trend of trending">
       <movie-preview [movie]="trend"></movie-preview>
+    </ion-slide>
+  </ion-slides>
+
+  <h2 class="trending">In the cinemas now</h2>
+    <ion-slides [options]="opts">
+      <ion-slide *ngFor="let movie_upcoming of upcoming">
+      <movie-preview [movie]="movie_upcoming"></movie-preview>
     </ion-slide>
   </ion-slides>
 </div>

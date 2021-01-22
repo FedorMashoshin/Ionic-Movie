@@ -22,4 +22,14 @@ export class TopactorsPage implements OnInit {
     })
   }
 
+  doRefresh(e){
+    this.api.getPopularActors().subscribe(res => {
+      console.log('Popular Actors:', res);
+      this.popularActors = res;
+    }); 
+    setTimeout(() => {
+      e.target.complete();
+    }, 2000)
+  }
+
 }

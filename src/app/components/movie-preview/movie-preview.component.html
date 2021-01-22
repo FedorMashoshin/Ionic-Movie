@@ -1,4 +1,15 @@
-<div class="movies" [routerLink]="[movie.media_type, movie.id]" tappable>
+<div *ngIf="movie.media_type" class="movies" [routerLink]="[movie.media_type, movie.id]" tappable>
+  <div class="image-container">
+    <img class="image" [src]="imageUrl" alt="">
+    <div class="rating"
+    [ngStyle]="{'background-color': movie.vote_average < 5 ? 'var(--ion-color-danger)' : (movie.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning)') }">
+    {{ movie.vote_average * 10 }}%</div>
+  </div>
+  <span class="title">{{ movie.title || movie.original_name }}</span> <br>
+  <span class="release_date">{{ (movie.release_date || movie.first_air_date) | date: 'MMMM, y' }}</span>
+</div>
+
+<div *ngIf="!movie.media_type" class="movies" [routerLink]="['/movie', movie.id]" tappable>
   <div class="image-container">
     <img class="image" [src]="imageUrl" alt="">
     <div class="rating"

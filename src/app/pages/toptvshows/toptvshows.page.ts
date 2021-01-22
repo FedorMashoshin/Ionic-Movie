@@ -19,4 +19,14 @@ export class ToptvshowsPage implements OnInit {
     })
   }
 
+  doRefresh(e){
+    this.api.getPopularShows().subscribe(res => {
+      console.log('Top Shows:', res);
+      this.topShows = res;
+    }); 
+    setTimeout(() => {
+      e.target.complete();
+    }, 2000)
+  }
+
 }
