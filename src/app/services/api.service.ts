@@ -21,6 +21,14 @@ export class ApiService {
     )
   }
 
+  getNowadaysMovies(){
+    return this.http.get(`${environment.api}/movie/now_playing`).pipe(
+      map((res: any) => {
+        return res.results;
+      })
+    )
+  }
+
   getMovieDetails(id, type){
     return this.http.get(`${environment.api}/${type}/${id}`)
   }

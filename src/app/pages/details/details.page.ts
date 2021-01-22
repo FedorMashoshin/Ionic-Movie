@@ -57,5 +57,4 @@ export class DetailsPage implements OnInit {
       this.elementRef.nativeElement.style.setProperty('--main',  this.mainColor);
     })
   }
-
 }
