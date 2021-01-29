@@ -1,1 +1,2 @@
-# 🎥 Movie App (built with Ionic framework)
+# 🎥 Movie App 
+### Built with Ionic framework
