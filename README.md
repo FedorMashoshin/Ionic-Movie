@@ -7,7 +7,10 @@
 3. ***ionic serve*** (to run application in your browser);
 
 
-## Beautiful and useful mobile movie application, where you can *(all screenshots were made from IOS device)*: 
+## Beautiful and useful mobile movie application, where you can : 
+
+#### All screenshots were made from IOS device #### 
+
 - [x] 🎬 Check what movies are **trending** right now;
 - [x] 🎬 Find what movies are **in the cinemas now**; 
 
