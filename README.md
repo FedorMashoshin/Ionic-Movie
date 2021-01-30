@@ -1,8 +1,9 @@
 # 🎥 Mobile Movie App 
 ### Built with ***Ionic framework***, using [TMDB API](https://www.themoviedb.org/)
-
 #### Beautiful and useful mobile movie application, where you can *(all screenshots were made from IOS device)*: 
-| ***Find*** ✔️  what movies are **trending** right now ✔️  what movies are **in the cinemas right now**|
+| ***Find*** 
+⚡  what movies are **trending** right now 
+⚡ what movies are **in the cinemas right now**|
 |----|
 | <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2759.PNG" width="250"> |
 
