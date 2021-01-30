@@ -19,13 +19,12 @@
 | ------------- | ------------- | ------------- | ------------- | 
 |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="300">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="300">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="300"> |
 
-- [x] **Detailed inforamtion** about movie:
+- [x] **Detailed information** about movie:
 
-<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/MOVIE.jpeg" width="300"><img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2762.PNG" width="300">
+<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/MOVIE.jpeg" width="300"> <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2762.PNG" width="300">
 
+- [x] **Detailed information** about actor:
+
+<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2763.PNG" width="300"> <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2764.PNG" width="300">
     
-- [ ] Rating system (🚧 Under construction for now...);
-
-### Here are some screenshots, made from IOS device: 
-  <img src="https://mk0jobadderjftub56m0.kinstacdn.com/wp-content/uploads/stackoverflow.com-300.jpg" width="250">
-  
+- [ ] Customer rating system is 🚧 under construction for now ...;
