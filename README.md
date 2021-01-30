@@ -44,7 +44,7 @@
  
    | Side Menu| The most popular actors  | The most popular movies | The most popular TV shows |
 | ------------- | ------------- | ------------- | ------------- | 
-|  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="300">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="300">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="300"> |
+|  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="350"> |
 
 ---
 
