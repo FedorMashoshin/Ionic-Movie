@@ -1,6 +1,12 @@
 # 🎥 Mobile Movie App 
 ### Built with ***Ionic framework***, using [TMDB API](https://www.themoviedb.org/)
 
+## To run application simply do:
+1. ***npm install -g @ionic/cli*** (to install the Ionic CLI);
+2. ***npm i*** (to install all the dependencies);
+3. ***ionic serve*** (to run application in your browser);
+
+
 #### Beautiful and useful mobile movie application, where you can *(all screenshots were made from IOS device)*: 
 - [x] 🎬 Check what movies are **trending** right now;
 - [x] 🎬 Find what movies are **in the cinemas now**; 
