@@ -17,28 +17,28 @@
     refreShingspinner="circles"
     ></ion-refresher-content>
   </ion-refresher>
-  <div class="popular-top">
-    <img src="https://image.flaticon.com/icons/png/512/1486/1486474.png" alt="">
-    <span class="popular"> The 20 most popular actors <br><span class="small">(Based on TMDB rating)</span></span>
+  <div class="top__award">
+    <img class="top__award--medal" src="https://image.flaticon.com/icons/png/512/1486/1486474.png" alt="">
+    <span class="top__award--text"> The 20 most popular actors <br>
+      <span class="top__award--text-small">(Based on TMDB rating)</span>
+    </span>
   </div>
   <div class="line"></div>
-  <ion-row class="row" [routerLink]="['/actor', r.id]" tappable  *ngFor="let r of popularActors; let i = index">
-    <ion-col size="4" class="image">
+  <ion-row class="top__element" [routerLink]="['/actor', r.id]" tappable  *ngFor="let r of popularActors; let i = index">
+    <ion-col size="4" class="top__element--img">
       <ion-img [src]='imageUrl + r.profile_path'></ion-img>
-      <div class="rating"
+      <div class="top__element--rating"
       [ngStyle]="{'background-color': r.popularity < 5 ? 'var(--ion-color-danger)' : (r.popularity >= 20 ? 'var(--ion-color-success)' : 'var(--ion-color-warning') }">
         {{ r.popularity | number:'1.1-1' }}
       </div>
     </ion-col>
-    <ion-col size="8" class="preview">
-      <p class="name">{{ i + 1 }}. {{ r.name }}</p>
-      <span class="best-movies">Best movies:</span>
-      <li class="movie" *ngFor="let movie of r.known_for">
+    <ion-col size="8">
+      <p class="top__element--name">{{ i + 1 }}. {{ r.name }}</p>
+      <span class="top__element--best-movies">Best movies:</span>
+      <li *ngFor="let movie of r.known_for">
           {{ movie.name || movie.original_title}}
       </li>
     </ion-col>
-    <ion-col class="ion-no-padding" size="12">
       <div class="line"></div>
-    </ion-col>
   </ion-row>
 </ion-content>
