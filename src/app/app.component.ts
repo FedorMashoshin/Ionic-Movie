@@ -18,7 +18,7 @@ export class AppComponent {
     this.initializeApp();  
   }
 
-  navigate =   
+  pages =   
   [  
       { 
       title : 'Top Actors',
