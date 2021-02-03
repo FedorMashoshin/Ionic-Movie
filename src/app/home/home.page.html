@@ -18,19 +18,19 @@
   </ion-refresher>
 
   <div class="search">
-    <h2>Find your favourite movie, tv show and even more...</h2>
-    <ion-searchbar color="light" placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
+    <h2 class="search__text">Find your favourite movie, tv show and even more...</h2>
+    <ion-searchbar class="search__field" color="light" placeholder="Search..." (ionChange)="searchChanged($event)"></ion-searchbar>
   </div>
 
-<div class="" *ngIf="!searchActive">
-  <h2 class="trending">Trending Movies</h2>
+<div *ngIf="!searchActive">
+  <h2 class="header">Trending Movies</h2>
     <ion-slides [options]="opts">
       <ion-slide *ngFor="let trend of trending">
       <movie-preview [movie]="trend"></movie-preview>
     </ion-slide>
   </ion-slides>
 
-  <h2 class="trending">In the cinemas now</h2>
+  <h2 class="header">In the cinemas now</h2>
     <ion-slides [options]="opts">
       <ion-slide *ngFor="let movie_upcoming of upcoming">
       <movie-preview [movie]="movie_upcoming"></movie-preview>
@@ -39,17 +39,17 @@
 </div>
 
 <div *ngIf="searchActive">
-  <ion-row class="search-row" *ngFor="let r of searchResults" [routerLink]="['/', r.media_type, r.id]" tappable>
+  <ion-row class="search-result" *ngFor="let r of searchResults" [routerLink]="['/', r.media_type, r.id]" tappable>
     <ion-col size="4" class="ion-padding">
       <ion-img [src]="r.imageUrl" *ngIf="r.imageUrl"></ion-img>
-        <div class="vote" 
+        <div class="search-result__rating" 
           [ngStyle]="{'background-color': r.vote_average < 5 ? 'var(--ion-color-danger)' : (r.vote_average >= 7 ? 'var(--ion-color-success)' : 'var(--ion-color-warning)') }">
           {{ r.vote_average }}
         </div>
     </ion-col>
     <ion-col size="8" class="preview">
-      <b class="title">{{ r.title || r.original_name }}</b>
-      <span class="year" *ngIf="r.release_date"><i> ({{ (r.release_date | slice:0:4) }})</i></span> <br>
+      <b class="search-result__title">{{ r.title || r.original_name }}</b>
+      <span class="search-result__year" *ngIf="r.release_date"><i> ({{ (r.release_date | slice:0:4) }})</i></span> <br>
       <span>{{ (r.overview.length > 90) ? (r.overview | slice:0:90)+'...': (r.overview) }}</span>
     </ion-col>
     <ion-col class="ion-no-padding" size="12">

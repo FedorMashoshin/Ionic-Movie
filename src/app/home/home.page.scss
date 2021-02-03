@@ -1,68 +1,49 @@
 ion-content{
-  font-family: 'Nunito', sans-serif;
+  --background: url('/assets/images/main-background.jpg') 40% 20%; 
 }
-
 .search{
   padding: 1rem;
   padding-bottom: 2rem;
-  background: url('https://e4p7c9i3.stackpathcdn.com/wp-content/uploads/2017/05/24-6-990x1408.jpg?iv=35') top;
+  background: url('/assets/images/search.jpg') top;
   background-position: cover;
   color:white;
-  & h2{
+  &__text{
     font-weight: 700;
     text-align: center;
   }
-  & ion-searchbar{
+  &__field{
     padding: 0;
   }
-
 }
-.test{
-  border-bottom:  none;
-}
-
-h2{
+.header{
   margin: 0;
   padding: 1rem;
   text-align: center;
   font-weight: 700;
 }
-.search-row{
+.search-result{
   display: flex;
   align-items: center;
-}
-.line{
-  margin: 0.5rem 0;
-  height: 3px;
-  background-color: rgb(235, 235, 235);
-}
-.vote{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 1.3rem;
-  font-weight: 700;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  position: absolute;
-  bottom:0;
-  right:0;
-  color: #fff;
-}
-.title{
-  font-size: 1.3rem;
-}
-.year{
-  font-style: italic;
-  color:rgb(117, 117, 117);
-  margin: 0.3rem 0;
-}
-ion-refresher-content {
-  background: transparent;
-}
-
-ion-content{
-  --background: url('https://1n0g9sqmedx94.wpcdn.shift8cdn.com/wp-content/uploads/tdomf/400399/iman.jpg') 40% 20%;
-  
+  &__rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom:0;
+    right:0;
+    color: #fff;
+  }
+  &__title{
+    font-size: 1.3rem;
+  }
+  &__year{
+    font-style: italic;
+    color:rgb(117, 117, 117);
+    margin: 0.3rem 0;
+  }
 }
