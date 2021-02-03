@@ -18,8 +18,7 @@ export class ActorPage implements OnInit {
 
   constructor(
     private api: ApiService,
-    private route: ActivatedRoute,
-    private elementRef: ElementRef
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
