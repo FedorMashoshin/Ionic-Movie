@@ -25,6 +25,14 @@ const routes: Routes = [
   {
     path: 'toptvshows',
     loadChildren: () => import('./pages/toptvshows/toptvshows.module').then( m => m.ToptvshowsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'intro',
+    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
   }
 ];
 
