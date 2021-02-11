@@ -1,13 +1,13 @@
 import { IntroGuard } from './guards/intro.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AutoLoginGuard } from './guards/auto-login.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canLoad: [IntroGuard, AutoLoginGuard]
+    canLoad: [IntroGuard]
   },
   {
     path: 'login',
@@ -27,15 +27,18 @@ const routes: Routes = [
   },
   {
     path: 'topactors',
-    loadChildren: () => import('./pages/topactors/topactors.module').then( m => m.TopactorsPageModule)
+    loadChildren: () => import('./pages/topactors/topactors.module').then( m => m.TopactorsPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'topmovies',
-    loadChildren: () => import('./pages/topmovies/topmovies.module').then( m => m.TopmoviesPageModule)
+    loadChildren: () => import('./pages/topmovies/topmovies.module').then( m => m.TopmoviesPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'toptvshows',
-    loadChildren: () => import('./pages/toptvshows/toptvshows.module').then( m => m.ToptvshowsPageModule)
+    loadChildren: () => import('./pages/toptvshows/toptvshows.module').then( m => m.ToptvshowsPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: '',

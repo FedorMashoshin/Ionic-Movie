@@ -4,8 +4,16 @@
        <ion-menu-button color="dark"></ion-menu-button>   
      </ion-buttons>  
      <ion-title>  
-       MOVIES
+       MOVIES by Fedor
      </ion-title>  
+     <ion-buttons slot="end"> 
+      <ion-button *ngIf="!isLogged" color="dark" (click)="login()" >
+        <ion-icon class="log" name="log-out-outline"></ion-icon>
+      </ion-button>  
+      <ion-button *ngIf="isLogged" color="dark" (click)="logout()" >
+        <ion-icon class="log log-logout" name="log-out-outline"></ion-icon>
+      </ion-button>   
+    </ion-buttons>  
    </ion-toolbar>   
 </ion-header> 
 

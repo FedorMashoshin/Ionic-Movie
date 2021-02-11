@@ -1,0 +1,48 @@
+ion-content{
+  --background: url('/assets/images/intro.jpg') no-repeat center center / cover;
+}
+.btn{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  &__header{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+    &--movie{
+      font-size: 3rem;
+    }
+    &--madeBy{
+      color: #fff;
+      font-style: italic;
+      margin: 0;
+      margin-bottom: 5rem;
+      font-size: 1rem;
+    }
+  }
+  &__guest{
+    margin-top: 2.5rem;
+  }
+}
+.input-group {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.errors {
+  font-size: small;
+  color: #fff;
+  background: var(--ion-color-danger);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
