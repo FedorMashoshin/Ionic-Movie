@@ -1,6 +1,13 @@
 ion-content{
   --background: url('/assets/images/main-background.jpg') 40% 20%; 
 }
+.log{
+  font-size: 1.7rem;
+  &-logout{
+    transform: rotate(180deg);
+  }
+}
+
 .search{
   padding: 1rem;
   padding-bottom: 2rem;

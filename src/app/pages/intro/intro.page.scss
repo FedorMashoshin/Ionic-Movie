@@ -1,0 +1,33 @@
+ion-content{
+  --background: url('/assets/images/intro.jpg') no-repeat center center / cover;
+}
+.btn{
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  width: 60%;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  &__header{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+    &--movie{
+      font-size: 3rem;
+    }
+    &--madeBy{
+      color: #fff;
+      font-style: italic;
+      margin: 0;
+      margin-bottom: 5rem;
+      font-size: 1rem;
+    }
+  }
+}

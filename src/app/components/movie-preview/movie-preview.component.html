@@ -1,4 +1,4 @@
-<div *ngIf="movie.media_type" class="movies" [routerLink]="[movie.media_type, movie.id]" tappable>
+<div *ngIf="movie.media_type" class="movies" [routerLink]="['/', movie.media_type, movie.id]" tappable>
   <div class="image-container">
     <img class="image" [src]="imageUrl" alt="">
     <div class="rating"

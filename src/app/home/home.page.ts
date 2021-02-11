@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import { AuthenticationService } from '../services/authentication.service';
 
+import { Plugins } from '@capacitor/core';
+const { Storage } = Plugins;
+const TOKEN_KEY = 'my-token';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -16,10 +21,14 @@ export class HomePage {
   };
   searchActive = false;
   searchResults = [];
+  isLogged: boolean;
 
-  constructor(private api: ApiService) {}
+  constructor(
+    private authService: AuthenticationService, 
+    private router: Router,
+    private api: ApiService) {}
 
-  ionViewWillEnter(){
+  async ionViewWillEnter(){
     this.api.getTrending().subscribe(res => {
       this.trending = res;
     })
@@ -27,6 +36,10 @@ export class HomePage {
     this.api.getNowadaysMovies().subscribe(res => {
       this.upcoming = res;
     })
+
+    const token = await Storage.get({ key: TOKEN_KEY });
+    // console.log(token)
+    token.value? this.isLogged = true : this.isLogged = false
   }
 
   searchChanged(e){
@@ -57,5 +70,13 @@ export class HomePage {
     }, 2000)
   }
 
+  async logout() {
+    await this.authService.logout();
+    this.router.navigateByUrl('/login', { replaceUrl: true });
+  }
+
+  login(){
+    this.router.navigateByUrl('/login', { replaceUrl: true });
+  }
 
 }
