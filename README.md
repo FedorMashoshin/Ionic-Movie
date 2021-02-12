@@ -10,7 +10,7 @@
 
 ## Beautiful and useful mobile movie application, where you can : 
 
-#### All screenshots were made from IOS device #### 
+#### All screenshots were made from IOS (IPhone XR) device #### 
 
 | 🚪 **Intro** Screen (when you launch app for the first time) | 🔑 **Login** Screen (or continue as a guest) <br/> _u: eve.holt@reqres.in <br/> p: cityslicka_  |
 | ------------- | ------------- | 
