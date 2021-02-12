@@ -11,16 +11,22 @@
 
 #### All screenshots were made from IOS device #### 
 
+| 🚪 **Intro** Screen (when you launch app for the first time) | 🔑 **Login** Screen (or continue as a guest) <br/> _u: eve.holt@reqres.in <br/> p: cityslicka_  |
+| ------------- | ------------- | 
+|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/intro-screen.PNG" width="350">|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/login.PNG" width="350">|
+
 - [x] 🎬 Check what movies are **trending** right now;
 - [x] 🎬 Find what movies are **in the cinemas now**; 
 
-<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2759.PNG" width="350">
+ | Logged In | Not Logged In | Side Menu |
+| ------------- | ------------- | ------------- |
+|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2844.PNG" width="350">|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2841.PNG" width="350">| <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |
 
 ---
 
 - [x] 🔍 **Search** for a specific movie;
 
-<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2760.PNG" width="350">
+<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2845.PNG" width="350">
 
 ---
 
@@ -42,9 +48,9 @@
 
 🏅 🏅 🏅
  
-   | Side Menu| The most popular actors  | The most popular movies | The most popular TV shows |
+   | The most popular actors  | The most popular movies | The most popular TV shows | If you are not logged in |
 | ------------- | ------------- | ------------- | ------------- | 
-|  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="350"> |
+  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="350"> | <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2841.PNG" width="350">|
 
 ---
 
