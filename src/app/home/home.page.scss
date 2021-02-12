@@ -1,5 +1,8 @@
 ion-content{
-  --background: url('/assets/images/main-background.jpg') 40% 20%; 
+  --background:none;
+  background: url('https://vsthemes.org/uploads/posts/2019-05/1582034177_white-minimalist-iphone_vsthemes_ru-6.jpg') no-repeat bottom; 
+
+  background-size: cover;
 }
 .log{
   font-size: 1.7rem;
@@ -23,6 +26,9 @@ ion-content{
   }
 }
 .header{
+  &:first-child{
+    margin-top: 2rem;
+  }
   margin: 0;
   padding: 1rem;
   text-align: center;

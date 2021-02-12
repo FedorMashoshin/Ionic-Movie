@@ -1,5 +1,6 @@
 ion-content{
-  --background: url('/assets/images/intro.jpg') no-repeat center center / cover;
+  --background:none;
+  background: url('/assets/images/intro.jpg') no-repeat center center / cover;
 }
 .btn{
   text-transform: uppercase;
