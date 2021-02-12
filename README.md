@@ -1,10 +1,11 @@
 # 🎥 Mobile Movie App 
-### Built with [Ionic framework](https://ionicframework.com/), using [TMDB API](https://www.themoviedb.org/)
+### Built with [Ionic framework](https://ionicframework.com/), using [TMDB API](https://www.themoviedb.org/).
 
 ## To run application simply do:
-1. ***npm install -g @ionic/cli*** (to install the Ionic CLI);
-2. ***npm i*** (to install all the dependencies);
-3. ***ionic serve*** (to run application in your browser);
+1. ***clone*** this repo 
+2. ***npm install -g @ionic/cli*** (to install the Ionic CLI);
+3. ***npm i*** (to install all the dependencies);
+4. ***ionic serve*** (to run application in your browser);
 
 
 ## Beautiful and useful mobile movie application, where you can : 
