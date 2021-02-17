@@ -12,7 +12,7 @@
 
 #### All screenshots were made from IOS (IPhone XR) device #### 
 
-| 🚪 **Intro** Screen (when you launch app for the first time) | 🔑 **Login** Screen (or continue as a guest) <br/> _u: eve.holt@reqres.in <br/> p: cityslicka_  |
+| 🚪 **Intro** Screen (when you launch app for the first time) | 🔑 **Login** Screen (or continue as a guest) <br/> _(u: eve.holt@reqres.in; p: cityslicka)_  |
 | ------------- | ------------- | 
 |<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/intro-screen.PNG" width="350">|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/login.PNG" width="350">|
 
@@ -27,7 +27,7 @@
 
 - [x] 🔍 **Search** for a specific movie;
 
-<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2845.PNG" width="350">
+<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2760.PNG" width="350">
 
 ---
 
@@ -49,9 +49,9 @@
 
 🏅 🏅 🏅
  
-   | The most popular actors  | The most popular movies | The most popular TV shows | If you are not logged in |
+   | The most popular actors  | The most popular movies | The most popular TV shows |
 | ------------- | ------------- | ------------- | ------------- | 
-  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="350"> | <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2841.PNG" width="350">|
+  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2768.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2769.PNG" width="350">  |  <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2766.PNG" width="350"> | 
 
 ---
 
