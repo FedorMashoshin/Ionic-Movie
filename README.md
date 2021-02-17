@@ -21,7 +21,7 @@
 
  | Logged In | Not Logged In | Side Menu |
 | ------------- | ------------- | ------------- |
-|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2844.PNG" width="350">|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2841.PNG" width="350">| <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |
+|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2842.PNG" width="350">|<img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2841.PNG" width="350">| <img src="https://github.com/FedorMashoshin/Ionic-Movie/raw/main/src/assets/screenshots/IMG_2765.PNG" width="350">  |
 
 ---
 
