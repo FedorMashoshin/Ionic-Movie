@@ -55,5 +55,3 @@
 
 ---
 
-
-- [ ] Customer rating system is 🚧 under construction for now ...;
